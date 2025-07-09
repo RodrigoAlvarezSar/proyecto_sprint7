@@ -9,14 +9,12 @@ disp_button = st.button('Construir un gráfica de dispersión') # crear un botó
 if hist_button: # al hacer clic en el botón
     # escribir un mensaje
     st.write('Creación de un histograma')
-         
-    fig = px.histogram(car_data, x="odometer")
-     
-         # mostrar un gráfico Plotly interactivo
+    fig = px.histogram(car_data, x="odometer") 
+    # mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig, use_container_width=True)
+
 if disp_button:
     st.write('Creacion de un diagrama de dispersion')
-
     #Creación de gráfico de dispersión
     fig = px.scatter(car_data, x="odometer", y="price") # crear un gráfico de dispersión
-    fig.show()
+    st.plotly_chart(fig, use_container_width=True)
